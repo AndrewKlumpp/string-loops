@@ -5,7 +5,11 @@
 // **before the first vowel** to the **end of the word** then add 'ay'
 
 function pigLatinWord(word) {
-  // your code here...
+  let vowels = 'aeiou';
+
+  if (vowels.includes(word[0])) {
+    return word + "yay";
+  }
 };
 
 console.log(pigLatinWord("apple")); //=> "appleyay"
