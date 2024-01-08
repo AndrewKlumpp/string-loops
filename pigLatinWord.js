@@ -6,9 +6,16 @@
 
 function pigLatinWord(word) {
   let vowels = 'aeiou';
-
-  if (vowels.includes(word[0])) {
+      if (vowels.includes(word[0])) {
     return word + "yay";
+      }
+  for (let i = 0; i < word.length; i++) {
+    let letter = word[i];
+      if (vowels.includes(letter)) {
+        let firstPart = word.slice(i);
+        let secondPart = word.slice(0, i);
+        return firstPart + secondPart + "ay";
+      }
   }
 };
 
